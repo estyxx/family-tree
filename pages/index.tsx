@@ -1,9 +1,10 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { ReactFamilyTree } from "../components/family-tree";
-
+import classNames from "classnames";
 const WIDTH = 70;
 const HEIGHT = 80;
+
 const NODES = [
   {
     id: "HkqEDLvxE",
@@ -642,10 +643,34 @@ const NODES = [
   },
 ];
 
-const FamilyNode = ({ node }) => {
-  return <div>{node?.gender}</div>;
+
+
+export const FamilyNode = ({
+  node,
+  isRoot,
+  onSubClick,
+  style,
+})=> {
+  return (
+    <div className={styles.root} style={style} title={node.id}>
+      <div
+        className={classNames(
+          styles.inner,
+          styles[node.gender],
+          isRoot && styles.isRoot
+        )}
+      />
+      {node.hasSubTree && (
+        <div
+          className={classNames(styles.sub, styles[node.gender])}
+          onClick={() => onSubClick(node.id)}
+        />
+      )}
+    </div>
+  );
 };
-const rootId = NODES[0].id
+
+const rootId = NODES[0].id;
 export default function Home() {
   return (
     <div className={styles.container}>
