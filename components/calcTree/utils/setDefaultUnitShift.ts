@@ -1,7 +1,7 @@
 import { min, prop } from './index';
 import { arrangeInOrder, correctUnitsShift } from './units';
 import { unitNodesCount } from './family';
-import type { Family } from '../types';
+import type { Family } from '../../types';
 
 const arrangeUnitsIn = (family: Family): void => {
   const diff = unitNodesCount(family.parents) - unitNodesCount(family.children);

@@ -7,7 +7,7 @@ import { prop, withRelType } from '../utils';
 import { newFamily } from '../utils/family';
 import { unitsToNodes } from '../utils/units';
 import { NODES_IN_COUPLE } from '../constants';
-import { Family, FamilyType, Node, RelType } from '../types';
+import { Family, FamilyType, Node, RelType } from '../../types';
 import { correctOverlaps } from './correctOverlaps';
 
 export const createFamilyWithoutParents = (store: Store): readonly Family[] => {

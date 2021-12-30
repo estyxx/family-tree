@@ -2,7 +2,7 @@ import { prop, withIds } from '../utils';
 import { getUnitX, nodeCount } from '../utils/units';
 import { getParentsX, withType } from '../utils/family';
 import { HALF_SIZE, NODES_IN_COUPLE, SIZE } from '../constants';
-import { Connector, Family, FamilyType, Unit } from '../types';
+import { Connector, Family, FamilyType, Unit } from '../../types';
 
 const getChildIDs = (unit: Unit): readonly string[] => (
   unit.nodes.map(prop('children')).flat().map(prop('id'))

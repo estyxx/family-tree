@@ -1,6 +1,6 @@
 import { SIZE } from '../constants';
 import { prop } from './index';
-import type { Family, Node, Unit } from '../types';
+import type { Family, Node, Unit } from '../../types';
 
 export const newUnit = (
   fid: number,

@@ -2,7 +2,7 @@ import { getParentsX, withType } from '../utils/family';
 import { getUnitX, nodeCount, nodeIds } from '../utils/units';
 import { inAscOrder, max, min, withId, withIds } from '../utils';
 import { HALF_SIZE, NODES_IN_COUPLE, SIZE } from '../constants';
-import { Connector, Family, FamilyType, Unit } from '../types';
+import { Connector, Family, FamilyType, Unit } from '../../types';
 
 export const children = (families: readonly Family[]): readonly Connector[] => (
   families

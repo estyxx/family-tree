@@ -1,7 +1,7 @@
 import { prop, withId, withIds } from '../utils';
 import { unitsToNodes } from '../utils/units';
 import { setDefaultUnitShift } from '../utils/setDefaultUnitShift';
-import type { Family, Node, Unit } from '../types';
+import type { Family, Node, Unit } from '../../types';
 
 const moveSharedUnitToRight = (sharedIDs: readonly string[]) => (
   (a: Unit, b: Unit) => {

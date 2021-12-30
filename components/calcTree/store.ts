@@ -1,7 +1,7 @@
 import { toMap, withId } from './utils';
 import { withType } from './utils/family';
-import type { Family, Node } from './types';
-import { FamilyType } from './types';
+import type { Family, Node } from '../types';
+import { FamilyType } from '../types';
 
 // TODO think about refactoring
 class Store {

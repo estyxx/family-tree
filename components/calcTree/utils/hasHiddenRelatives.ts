@@ -1,4 +1,4 @@
-import { Family, FamilyType, Node, Unit } from '../types';
+import { Family, FamilyType, Node, Unit } from '../../types';
 import { withId, withIds } from './index';
 import { nodeIds } from './units';
 

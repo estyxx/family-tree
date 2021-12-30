@@ -4,7 +4,7 @@ import { newUnit } from '../utils/units';
 import { newFamily } from '../utils/family';
 import { setDefaultUnitShift } from '../utils/setDefaultUnitShift';
 import { createChildUnitsFunc } from '../utils/createChildUnitsFunc';
-import { Family, FamilyType, Node, Relation, Unit } from '../types';
+import { Family, FamilyType, Node, Relation, Unit } from '../../types';
 
 const hasSameRelation = (node: Node | undefined) => (
   (rel: Relation): boolean => !node || node.children.some(withId(rel.id))

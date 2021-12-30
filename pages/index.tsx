@@ -2,10 +2,11 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { ReactFamilyTree } from "../components/family-tree";
 import classNames from "classnames";
+import { Node } from "../components/types"
 const WIDTH = 70;
 const HEIGHT = 80;
 
-const NODES = [
+const NODES: Node[] = [
   {
     id: "HkqEDLvxE",
     gender: "male",
@@ -659,7 +660,7 @@ export const FamilyNode = ({
           styles[node.gender],
           isRoot && styles.isRoot
         )}
-      />
+      >{node.id}</div>
       {node.hasSubTree && (
         <div
           className={classNames(styles.sub, styles[node.gender])}

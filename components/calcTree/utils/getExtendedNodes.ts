@@ -1,7 +1,7 @@
 import { getUnitX } from './units';
 import { hasHiddenRelatives } from './hasHiddenRelatives';
 import { SIZE } from '../constants';
-import { ExtNode, Family, FamilyType, Node, Unit } from '../types';
+import { ExtNode, Family, FamilyType, Node, Unit } from '../../types';
 
 const extendNode = (family: Family) => (
   (unit: Unit) => (

@@ -2,7 +2,7 @@ import type Store from '../store';
 import { byGender, prop } from '../utils';
 import { arrangeInOrder, newUnit } from '../utils/units';
 import { newFamily } from '../utils/family';
-import { Family, FamilyType, Unit } from '../types';
+import { Family, FamilyType, Unit } from '../../types';
 
 const getParentUnits = (store: Store, unit: Unit): readonly Unit[] => (
   unit.nodes.reduce<Unit[]>((units, child) => {

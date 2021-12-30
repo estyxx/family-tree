@@ -1,7 +1,7 @@
 import type Store from '../store';
 import { hasDiffParents } from '../utils';
 import { rightOf } from '../utils/family';
-import type { Family } from '../types';
+import type { Family } from '../../types';
 import { createBloodFamilies, createDiffTypeFamilies, createFamilyWithoutParents } from './create';
 
 const arrangeFamilies = (families: readonly Family[]): void => {

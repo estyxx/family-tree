@@ -1,5 +1,5 @@
 import { SIZE } from '../constants';
-import type { Family, Unit } from '../types';
+import type { Family, Unit } from '../../types';
 import { prop, withIds } from './index';
 import { unitNodesCount } from './family';
 

@@ -1,5 +1,5 @@
 import type Store from '../store';
-import { Family, FamilyType } from '../types';
+import { Family, FamilyType } from '../../types';
 import { min, prop } from './index';
 import { withType } from './family';
 import { getUnitX } from './units';

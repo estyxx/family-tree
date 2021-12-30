@@ -1,19 +1,35 @@
-import React from "react";
-import {Connector} from "./connector";
-import {calcTree}  from "./calcTree";
+import React, { ReactNode } from "react";
+import { Connector } from "./connector";
+import { calcTree } from "./calcTree";
+import { Node, ExtNode } from "./types"
 
-export const ReactFamilyTree = ({...props}) => {
-  const data = calcTree(props.nodes, {
-    rootId: props.rootId,
-    placeholders: props.placeholders,
+type ReactFamilyTreeProps = {
+  nodes: Node[];
+  rootId: string;
+  width: number;
+  height: number;
+  placeholders?: boolean;
+  className?: string;
+  renderNode: (node: ExtNode) => ReactNode;
+};
+
+export const ReactFamilyTree = ({
+  nodes,
+  rootId,
+  placeholders,
+  width,
+  height,
+  className,
+  renderNode,
+}: ReactFamilyTreeProps): JSX.Element => {
+  const data = calcTree(nodes, {
+    rootId: rootId,
+    placeholders: placeholders,
   });
-
-  const width = props.width / 2;
-  const height = props.height / 2;
 
   return (
     <div
-      className={props.className}
+      className={className}
       style={{
         position: "relative",
         width: data.canvas.width * width,
@@ -21,9 +37,14 @@ export const ReactFamilyTree = ({...props}) => {
       }}
     >
       {data.connectors.map((connector, idx) => (
-        <Connector key={idx} connector={connector} width={width} height={height} />
+        <Connector
+          key={idx}
+          connector={connector}
+          width={width / 2}
+          height={height / 2}
+        />
       ))}
-      {data.nodes.map(props.renderNode)}
+      {data.nodes.map(renderNode)}
     </div>
   );
 };

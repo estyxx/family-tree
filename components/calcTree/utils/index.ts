@@ -1,5 +1,5 @@
 import type Store from '../store';
-import type { Gender, Node, Relation } from '../types';
+import type { Gender, Node, Relation } from '../../types';
 
 export const nextIndex = (index: number) => index + 1;
 export const prop = <T, K extends keyof T>(name: K) => (item: T): T[K] => item[name];

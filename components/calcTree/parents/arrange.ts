@@ -3,7 +3,7 @@ import { SIZE } from '../constants';
 import { correctUnitsShift, getUnitX, nodeCount, sameAs } from '../utils/units';
 import { rightOf, unitNodesCount, widthOf } from '../utils/family';
 import { nextIndex } from '../utils';
-import type { Family } from '../types';
+import type { Family } from '../../types';
 
 const arrangeNextFamily = (family: Family, nextFamily: Family): void => {
   const unit = family.children[0]!;

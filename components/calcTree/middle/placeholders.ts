@@ -1,5 +1,5 @@
 import type Store from '../store';
-import { Gender, Mutable, Node, Relation, RelType } from '../types';
+import { Gender, Mutable, Node, Relation, RelType } from '../../types';
 import { relToNode } from '../utils';
 
 const createRel = (id: string, type = RelType.blood): Relation => ({ id, type });
