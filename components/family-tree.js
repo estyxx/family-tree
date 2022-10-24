@@ -1,6 +1,6 @@
 import React from "react";
 import Connector from "./connector";
-import calcTree  from ".calcTree";
+import calcTree  from "./calcTree";
 
 export const ReactFamilyTree = (props) => {
   const data = calcTree(props.nodes, {
